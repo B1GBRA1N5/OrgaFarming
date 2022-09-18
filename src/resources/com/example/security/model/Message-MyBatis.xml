@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="message">
+
+	<insert id="Insert" parameterType="map">
+		insert into	orga.reviews(name,email,review_text)
+		values(#{p.name},#{p.email},#{p.review_text});
+	</insert>
+	 
+		 <select id="getReviews" resultType="RegisterFormModel">
+		SELECT name,email,review_text from orga.reviews;
+	  </select> 
+	 
+</mapper>	
